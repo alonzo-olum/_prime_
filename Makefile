@@ -8,7 +8,8 @@ _SRC=main.c prime.c
 _OBJ=main.o prime.o
 _DEPS=prime.h
 
-CFLAGS=-I$(IDIR)
+# -lm math linkage lib for some unreferenced distributions
+CFLAGS=-I$(IDIR) -lm
 
 OBJ=$(patsubst %, $(ODIR)%, $(_OBJ))
 SRC=$(patsubst %, $(SDIR)%, $(_SRC))
